@@ -17,3 +17,5 @@ When the web developer makes any changes and it is saved or updated, the **commi
 * What is a merge conflict?
 
 A **merge conflict** arises when two branches (the current branch and the branch that you want to merge into) have commits that are not present in the other. A merge updates the master branch with revisions made on another branch and applies changes when present. If there are disagreeing changes, then a merge confict arises but the terminal will explain how to fix it.
+
+#Special shoutout to my teacher: Andrew!
