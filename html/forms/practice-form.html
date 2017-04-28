@@ -1,0 +1,52 @@
+<!Doctype html>
+<html>
+<head>
+<title>Practice Form</title>
+<h1>Various Fishing Excursions on Lake Michigan</h1>
+<h3>Please fill out the below criteria to find out more about our fishing excursions</h3>
+</head>
+<body>
+
+<form name="Fishing in Chicago" action="success.html" method="post">
+  <fieldset>
+    <div>
+      <label>Full name:</label>
+      <input type="text" name="fullname">
+    </div>
+
+    <div>
+      <label>Email:</label>
+      <input type="email" name="email">
+    </div>
+
+    <div>
+      <label>Telephone:</label>
+      <input type="tel" name="usrtel">
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <div>
+      <label>Type of Fishing Excursion:</label>
+      <select name="Excursion">
+        <option value="Salmon">Salmon Fishing</option>
+        <option value="Trout">Trout Fishing</option>
+        <option value="Walleye">Walleye Fishing</option>
+      </select>
+    </div>
+
+    <div>    
+      <label>Choose a date:</label>
+      <input type="date" name="date">
+    </div>
+
+    <div>
+      <input type="checkbox" name="cb-agree" value="agree">
+      I am new to fishing in the Midwest.
+    </div>
+  </fieldset>
+  
+  <button type="submit">Let's go fishing!</button>
+</form>
+</body>
+</html>
