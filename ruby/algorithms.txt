@@ -10,3 +10,28 @@ Write the algorithm for using an elevator
 		- If the person wants entertainment, then the robot will start telling jokes
 - After the elevator ride
 	- The robot will go back to the ground floor and wait for the next person
+
+
+How to make Mac and Cheese
+- First, need to prepare the pasta water
+	- Find a giant pot
+	- Fill with water 
+	- Add salt
+	- Turn on the fire
+- While the water comes to a boil
+	- Prepare the bechamel sauce
+		- Add some butter to a saucepan
+		- Apply medium heat
+		- Mince garlic and add to melted butter
+		- Add flour and make a choux pastry
+		- Slowly add milk and use a whisk to declump the choux pastry
+		- Allow the sauce to slowly simmer and it should start to thicken
+		- Once the sauce is thickened, add grated cheese of your choice
+- While the bechamel sauce continues to thicken
+	- Add pasta to the now boiling water
+	- Stir a bit to make sure that the pasta does not stick
+	- Depending on the type of pasta, watch for when the pasta becomes al dente
+	- Once the pasta is al dente, pour through strainer in sink
+	- Keep the pasta in the pot
+- The sauce is ready to be added to the pot with pasta
+	- Mix and enjoy!
