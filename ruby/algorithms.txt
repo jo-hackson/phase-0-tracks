@@ -1,0 +1,12 @@
+Write the algorithm for using an elevator
+
+- When a person enters the elevator
+	- Have the robot ask the person what floor they want to go to 
+	- Wait for the person's response 
+	- Press the corresponding number to the elevator which are in numerical order
+- During the elevator ride
+	- Have the robot ask if the person would like peace and quiet or entertainment
+		- If the person wants peace and quiet, then the robot will retreat into silent mode
+		- If the person wants entertainment, then the robot will start telling jokes
+- After the elevator ride
+	- The robot will go back to the ground floor and wait for the next person
