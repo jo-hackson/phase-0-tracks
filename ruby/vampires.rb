@@ -1,7 +1,7 @@
 puts "How many employees will be processed?"
-number_of_employees = gets.chomp
+number_of_employees = gets.chomp.to_i
 
-while number_of_employees > 0
+until number_of_employees <= 0
 
 	# Name
 	puts "What is your name?"
@@ -71,7 +71,7 @@ while number_of_employees > 0
 		puts "Results inconclusive."
 	end
 
-  number_of_employees -= 1  
+  number_of_employees = number_of_employees - 1
 
 end
 
