@@ -71,7 +71,7 @@ while number_of_employees > 0
 		puts "Results inconclusive."
 	end
 
-  number_of_employees -= 1
-  
+  number_of_employees -= 1  
+
 end
 
