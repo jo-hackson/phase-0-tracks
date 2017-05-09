@@ -75,10 +75,10 @@ until number_of_employees <= 0
 	    employee_input = "done"
 	  end
 	end
-		
-
-
+	
   number_of_employees -=1
 
 end
+
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
 
