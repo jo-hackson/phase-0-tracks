@@ -63,13 +63,21 @@ until number_of_employees <= 0
 	end
 
 	final_say = "done"
+	special_allergy = "sunshine"
 	
 	employee_input = ""
-	while employee_input != final_say
+  
+  	while employee_input != final_say # || special_allergy = "sunshine"
 		puts "Name any allergies, one at a time, that you have. Type 'done' when finished."
 		employee_input = gets.chomp
+    if employee_input == special_allergy
+	    puts "Probably a vampire"
+	    employee_input = "done"
+	  end
 	end
-	
+		
+
+
   number_of_employees -=1
 
 end
