@@ -12,7 +12,7 @@ until number_of_employees <= 0
 		else
 		  first_name = false
 		end
-
+ 
 	# Age
 	puts "How old are you?"
 	input_age = gets.chomp
