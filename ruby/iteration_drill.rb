@@ -9,10 +9,7 @@ zombie_apocalypse_supplies = ["hatchet", "rations", "water jug", "binoculars",
 
 # 2. In order to keep yourself organized, sort your zombie_apocalypse_supplies
 # in alphabetical order. Do not use any special built-in methods.
-# p zombie_apocalypse_supplies[-1], zombie_apocalypse_supplies[3], 
-# zombie_apocalypse_supplies[-2], zombie_apocalypse_supplies[-3], 
-# zombie_apocalypse_supplies[0,],  zombie_apocalypse_supplies[1],
-# zombie_apocalypse_supplies[-4], zombie_apocalypse_supplies[2]
+# ----
 
 # 3. Create a method to see if a particular item (string) is in the
 # zombie_apocalypse_supplies. Do not use any special built-in methods.
@@ -70,7 +67,7 @@ extinct_animals = {
 # Do not use any special built-in methods.
 # ----
 
-# 5. We just found out that the Passenger Pigeon is actually not extinct!
+# 5. We just found out that the Tasmanian Tiger is actually not extinct!
 # Remove them from extinct_animals and return the key value pair as a two item array.
 # Find the built-in method that helps you accomplish this in the Ruby documentation
 # for Hashes.

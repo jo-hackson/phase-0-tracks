@@ -1,84 +1,32 @@
-puts "Enter a full name: "
-original_name = gets.chomp
+# Method to swap the first and last name positions
+def swap_name_position(input)
+	# input is a string
+	# use .split to divide the string by " " or space
+	# call the new variable "split_name"
+	split_name = input.split(" ")
+	
+	# swap the position of the name by the index
+	# an array will be created
+	swap_name = split_name[1], split_name[0]
+	#=> ["Ma", "Jo"] with class Array
+end
 
-# def alias_maker
+# Method to separate the characters to prepare for
+# conversion in another method
+def separate_characters(input)
+	# input is ["Ma", "Jo"] class = Array
+	# convert array to string to be split up by letter
+	# .join will return a string by converting each
+	# element in the array to a string
+	input = input.join(", ")
+	separate_characters = input.split("")
+	p separate_characters.length
+	#=> ["M", "a", ",", " ", "J", "o"] with class Array
+end
 
-	def swap_names_positions
-		split_name = original_name.split(" ")
-		
-		# swap first and last name positions
-		split_name[0], split_name[1] = split_name[1], split_name[0]
-		swap_name = split_name[0], split_name[1]
-		swap_name
-	end
+def alias_maker(input)
+	swapped_name = swap_name_position(input)
+	separated_characters = separate_characters(swapped_name)
+end
 
-original_name.swap_names_positions
-
-# end
-
-
-
-
-
-
-# # # this will separate the letters 
-# 	def separate_characters
-# 		puts "hello"
-# 		index = 0
-# 		# container response, add stuff as we go
-# 		conversion = ""
-# 		while index < original_name.length
-# 			# conversion is getting built as the program runs
-# 			conversion << @swap_name(original_name[index]).to_s
-# 			index += 1
-# 		end
-# 		conversion
-# 	end
-
-# p separate_characters(@swap_name)
-# print separate_characters(@swap_name)
-# puts separate_characters(@swap_name)
-
-
-# # method to change the letter depending on
-# # if it is a vowel or consonant
-# # input a character
-# # output the next character
-# 	def change_letter(char)
-# 		char = char.downcase
-# 		vowel = "aeiou"
-# 		consonant = "bcdfghjklmnpqrstvwxyz"
-
-# 		if char == " "
-# 			" "
-# 		elsif char == "z"
-# 			"a"
-# 		elsif vowel.index(char) == nil && consonant.index(char) == nil
-# 			char
-# 		elsif vowel.index(char) == nil
-# 		# if the char does not match with one of the values in vowel
-# 			con_position = consonant.index(char).next
-# 			new_con = consonant[con_position]
-# 			new_con
-# 		else
-# 			vowel_position = vowel.index(char).next
-# 			new_vowel = vowel[vowel_position]
-# 			new_vowel
-# 		end
-
-# 	end # end of change_letter method
-
-
-
-
-
-# end
-
-
-
-
-
-
-
-
-# end # end of alias_maker method
+p alias_maker("Jo Ma")
