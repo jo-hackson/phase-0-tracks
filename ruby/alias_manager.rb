@@ -3,7 +3,7 @@ original_name = gets.chomp
 
 # def alias_maker
 
-	def swap_names_positions(original_name)
+	def swap_names_positions
 		split_name = original_name.split(" ")
 		
 		# swap first and last name positions
@@ -12,11 +12,11 @@ original_name = gets.chomp
 		swap_name
 	end
 
-
+original_name.swap_names_positions
 
 # end
 
-p swap_names_positions(original_name)
+
 
 
 
