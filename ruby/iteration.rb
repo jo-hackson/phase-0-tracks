@@ -86,10 +86,19 @@ hash_of_numbers = {
 # 1. A method that iterates through the items, deleting any that 
 # meet a certain condition (for example, deleting any numbers that are less than 5).
 
-is_even = array_of_numbers.even?
-array_of_numbers.delete_if { |number| number == is_even}
-p array_of_numbers
+# is_even = array_of_numbers.even?
+# array_of_numbers.delete_if { |number| number == is_even}
+# p array_of_numbers
 
+# array_of_numbers.each do |x|
+# 	next if x.to_i == even
+# 	array_of_numbers.delete x
+# end
+
+is_even == (array_of_numbers[x] % 2) = 0
+p array_of_numbers
+array_of_numbers.delete_if { |x| x == is_even }
+p array_of_numbers
 
 
 
