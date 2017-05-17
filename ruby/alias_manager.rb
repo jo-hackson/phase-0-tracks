@@ -51,14 +51,14 @@ def capitalize(input)
   input = input.join(" ")
 end
 
-def alias_maker
-	puts "Please enter your full name: "
-	user_input = gets.chomp
+# puts "Please enter your full name: "
+# user_input = gets.chomp
 
+def alias_maker(user_input)
 	swapped_name = swap_name_position(user_input)
 	new_name = alias_creation(swapped_name)
 	formal_new_name = capitalize(new_name)
-	"Your original name #{input}. Your new alias is #{formal_new_name}"
+	# p "Your original name #{input}. Your new alias is #{formal_new_name}"
 end
 
 p alias_maker("Jo Ma")
