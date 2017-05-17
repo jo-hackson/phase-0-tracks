@@ -51,14 +51,45 @@ def capitalize(input)
   input = input.join(" ")
 end
 
-# puts "Please enter your full name: "
-# user_input = gets.chomp
-
+#=> input Array of names
+#=> ["Jo Jackson", "Wesley Jacson", "Flo Rida"]
 def alias_maker(user_input)
+	# user_input = array[0..-1]
+	# p user_input + "Hello"
 	swapped_name = swap_name_position(user_input)
 	new_name = alias_creation(swapped_name)
 	formal_new_name = capitalize(new_name)
-	# p "Your original name #{input}. Your new alias is #{formal_new_name}"
+	"Your original name #{user_input}. Your new alias is #{formal_new_name}"
 end
 
-p alias_maker("Jo Ma")
+# Provide a user interface that lets a user enter a name 
+# and get a fake name back. Let the user do this repeatedly 
+# until they decide to quit by typing 'quit'. 
+# (They might just hit Enter to continue.)
+
+array = Array.new
+
+puts "Please enter a full name: "
+user_response = gets.chomp
+array << user_response
+
+until user_response == "quit"
+	puts "Please enter another full name or type 'quit': "
+	user_response = gets.chomp
+	array << user_response unless user_response == "quit"
+	#=> ["Jo Jackson", "Wesley Jacson", "Flo Rida"]
+	#=> output Array of names
+	# array.each { |user_response| alias_maker(user_response)}
+end 
+
+word_count = 0
+while word_count < array.length
+	p alias_maker(array[word_count])
+	word_count += 1
+end
+
+
+
+
+
+
