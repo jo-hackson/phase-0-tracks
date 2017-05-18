@@ -16,20 +16,27 @@ portuguese = {
 	'verbs' => [
 		'picar',
 		'pincelar',
-		'salpicar' => ['to splash'],
+		'salpicar',
 		'desfrutar',
 		'indigar'
 	],
 
+	'english_verbs' => [
+		'to string',
+		'to paint',
+		'to splash',
+		'to enjoy',
+		'to indicate'
+	],
+
 	'adjectives' => [
-	'suculento',
-	'cremoso',
-	'eficaz',
-	'qualquer',
-	'requintada'
+		'suculento',
+		'cremoso',
+		'eficaz',
+		'qualquer',
+		'requintada'
 	]
 }
-
 
 # puts portuguese['nouns'] 
 #=> a toalha
@@ -41,5 +48,27 @@ portuguese = {
 # puts portuguese['nouns'][2]
 #=> a areia
 
-puts portuguese['verbs'][2][0]
-#=> s
+# puts portuguese['verbs'][2]
+#=> salpicar
+
+# p portuguese
+# p portuguese['nouns'][1] = "peas"
+# p portuguese
+#=> change the value of "as ervilhas" to "peas"
+
+body_parts = [
+	# words in Portuguese
+	["os dedos", "o pescoco", "o ombro", "o joelho", "a perna"],
+	# words in English
+	["fingers", "chest", "shoulder", "knee", "leg"],
+	# gender of word
+	["masculino", "masculino", "masculino", "masculino", "feminino"]
+]
+
+# translation_body_parts = body_parts.transpose
+# p translation_body_parts
+# create a new array with corresponding words in Portuguese, 
+# English, and gender in one value
+
+
+
