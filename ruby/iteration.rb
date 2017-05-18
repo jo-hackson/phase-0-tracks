@@ -91,9 +91,9 @@ hash_of_numbers = {
 # p hash_of_numbers
 
 
-2. A method that filters a data structure for only items that 
-do satisfy a certain condition (for example, keeping any numbers that 
-are less than 5).
+# 2. A method that filters a data structure for only items that 
+# do satisfy a certain condition (for example, keeping any numbers that 
+# are less than 5).
 
 # keep objects that not even
 # array_of_numbers.keep_if { |index| (array_of_numbers[index] % 2) != 0}
@@ -103,28 +103,40 @@ are less than 5).
 # array_of_numbers.select! { |number| number.even? }
 # p array_of_numbers
 
-for hash
+# keep key values that are odd
+# hash_of_numbers.keep_if { |digit, word| digit.odd?}
+# p hash_of_numbers
 
 
-3. A different method that filters a data structure for only items 
-satisfying a certain condition -- Ruby offers several options!
+# 3. A different method that filters a data structure for only items 
+# satisfying a certain condition -- Ruby offers several options!
 
 # rejecting the number if it is less than 5
 # array_of_numbers.reject! { |number| number < 5 }
 # p array_of_numbers
 
-for hash
+# keep number less than 6
+# hash_of_numbers.select! { |digit, word| digit < 6}
+# p hash_of_numbers
+
+# reject if number is less than 6
+# new_hash = hash_of_numbers.reject { |digit, word| digit < 6}
+# p new_hash
 
 
-4. A method that will remove items from a data structure until the condition 
-in the block evaluates to false, then stops (you may not find a perfectly 
-working option for the hash, and that's okay).
+# 4. A method that will remove items from a data structure until the condition 
+# in the block evaluates to false, then stops (you may not find a perfectly 
+# working option for the hash, and that's okay).
 
-need for array
+# remove numbers that are less than 5 and place into a new array
+# note: if it was number > 5, then the whole array would print again
+# because 0 > 5 would return false and the method would stop
+# new_array = array_of_numbers.drop_while { |number| number < 5}
+# p new_array
 
-not done
-hash_of_numbers.reject { |digit, word| (digit / 5) != 0}
-p hash_of_numbers
+# remove numbers that are less than 5 and place into a new hash
+# new_hash = hash_of_numbers.drop_while { |digit, word| digit < 5}
+# p new_hash
 
 
 
