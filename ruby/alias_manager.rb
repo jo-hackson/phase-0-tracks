@@ -1,3 +1,10 @@
+def alias_maker(user_input)
+	swapped_name = swap_name_position(user_input)
+	new_name = alias_creation(swapped_name)
+	formal_new_name = capitalize(new_name)
+	"Your original name #{user_input}. Your new alias is #{formal_new_name}"
+end
+
 # Swap the first and last name positions
 # .downcase 
 # split accoridng to space
@@ -6,9 +13,10 @@
 def swap_name_position(input)
 	# input "Jo Ma"
 	input = input.downcase
-	split_name = input.split(" ")
-	swap_name = split_name[1], split_name[0]
+	split_name = input.split(" ") #=> automatically split by a space
+	swap_name = split_name[1], split_name[0] #=> can also use .reverse
 	swap_name = swap_name.join(" ")
+	#=> input.downcase.split.reverse.join
 	#=> output "ma jo" String
 end
 
@@ -22,18 +30,17 @@ def convert_letter(letter)
 	vowel = "aeioua"
 	consonant = "bcdfghjklmnpqrstvwxyzb"
 	alphabet = "abcdefghijklmnopqrstuvwxyz"
-
-	if alphabet.index(letter) == nil
-		" "
-	elsif vowel.index(letter) != nil
-		new_vowel = vowel[vowel.index(letter) + 1]
-		new_vowel
-	elsif consonant.index(letter) != nil
-		new_consonant = consonant[consonant.index(letter) + 1]
-		new_consonant
-	else
-		"there is an error"
-	end
+		if alphabet.index(letter) == nil
+			" "
+		elsif vowel.index(letter) != nil
+			new_vowel = vowel[vowel.index(letter) + 1]
+			new_vowel
+		elsif consonant.index(letter) != nil
+			new_consonant = consonant[consonant.index(letter) + 1]
+			new_consonant
+		else
+			"there is an error"
+		end
 end
 
 def alias_creation(input)
@@ -47,25 +54,31 @@ def alias_creation(input)
 end
 
 def capitalize(input)
-  input = input.split(" ").each {|word| word.capitalize!}
+  input = input.split.each {|word| word.capitalize!}
   input = input.join(" ")
+  # input.split.map(&:capitalize).join(" ")
+  # input.map {|x| x.capitalize} => using .map instead
+  # .map returns the change in new array, .each returns the original array
+  # &: passing method to function
 end
 
 #=> input Array of names
 #=> ["Jo Jackson", "Wesley Jacson", "Flo Rida"]
-def alias_maker(user_input)
-	# user_input = array[0..-1]
-	# p user_input + "Hello"
-	swapped_name = swap_name_position(user_input)
-	new_name = alias_creation(swapped_name)
-	formal_new_name = capitalize(new_name)
-	"Your original name #{user_input}. Your new alias is #{formal_new_name}"
-end
+# def alias_maker(user_input)
+# 	# user_input = array[0..-1]
+# 	# p user_input + "Hello"
+# 	swapped_name = swap_name_position(user_input)
+# 	new_name = alias_creation(swapped_name)
+# 	formal_new_name = capitalize(new_name)
+# 	"Your original name #{user_input}. Your new alias is #{formal_new_name}"
+# end
 
 # Provide a user interface that lets a user enter a name 
 # and get a fake name back. Let the user do this repeatedly 
 # until they decide to quit by typing 'quit'. 
 # (They might just hit Enter to continue.)
+
+
 
 array = Array.new
 
@@ -87,7 +100,6 @@ while word_count < array.length
 	p alias_maker(array[word_count])
 	word_count += 1
 end
-
 
 
 
