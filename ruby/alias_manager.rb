@@ -13,10 +13,10 @@ end
 def swap_name_position(input)
 	# input "Jo Ma"
 	input = input.downcase
-	split_name = input.split(" ") #=> automatically split by a space
+	split_name = input.split(" ") #=> automatically split by a space, (" ") is unnecessary
 	swap_name = split_name[1], split_name[0] #=> can also use .reverse
 	swap_name = swap_name.join(" ")
-	#=> input.downcase.split.reverse.join
+	#=> input.downcase.split.reverse.join (can be accomplished in one line)
 	#=> output "ma jo" String
 end
 
@@ -60,25 +60,13 @@ def capitalize(input)
   # input.map {|x| x.capitalize} => using .map instead
   # .map returns the change in new array, .each returns the original array
   # &: passing method to function
+  # with .each, will need !, with .map, no need
 end
-
-#=> input Array of names
-#=> ["Jo Jackson", "Wesley Jacson", "Flo Rida"]
-# def alias_maker(user_input)
-# 	# user_input = array[0..-1]
-# 	# p user_input + "Hello"
-# 	swapped_name = swap_name_position(user_input)
-# 	new_name = alias_creation(swapped_name)
-# 	formal_new_name = capitalize(new_name)
-# 	"Your original name #{user_input}. Your new alias is #{formal_new_name}"
-# end
 
 # Provide a user interface that lets a user enter a name 
 # and get a fake name back. Let the user do this repeatedly 
 # until they decide to quit by typing 'quit'. 
 # (They might just hit Enter to continue.)
-
-
 
 array = Array.new
 
@@ -100,8 +88,6 @@ while word_count < array.length
 	p alias_maker(array[word_count])
 	word_count += 1
 end
-
-
 
 
 
