@@ -59,13 +59,7 @@
 # Release 2
 
 
-# 2. A method that filters a data structure for only items that 
-# do satisfy a certain condition (for example, keeping any numbers that are less than 5).
-# 3. A different method that filters a data structure for only items 
-# satisfying a certain condition -- Ruby offers several options!
-# 4. A method that will remove items from a data structure until the condition 
-# in the block evaluates to false, then stops (you may not find a perfectly working 
-# 	option for the hash, and that's okay).
+
 
 array_of_numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
@@ -84,19 +78,53 @@ hash_of_numbers = {
 }
 
 # 1. A method that iterates through the items, deleting any that 
-# meet a certain condition (for example, deleting any numbers that are less than 5).
+# meet a certain condition (for example, deleting any numbers that are 
+# less than 5).
 
-is_even = array_of_numbers.even?
-array_of_numbers.delete_if { |number| number == is_even}
-p array_of_numbers
-
-
-
+# delete object if even
+# array_of_numbers.delete_if { |index| (array_of_numbers[index] % 2) == 0}
+# p array_of_numbers
 
 
+# delete the key and values of numbers that begin with the letter "t"
+# hash_of_numbers.delete_if {|digit, word| word[0] == "t"}
+# p hash_of_numbers
 
 
+2. A method that filters a data structure for only items that 
+do satisfy a certain condition (for example, keeping any numbers that 
+are less than 5).
 
+# keep objects that not even
+# array_of_numbers.keep_if { |index| (array_of_numbers[index] % 2) != 0}
+# p array_of_numbers
+
+# select (or keep) the numbers that are even
+# array_of_numbers.select! { |number| number.even? }
+# p array_of_numbers
+
+for hash
+
+
+3. A different method that filters a data structure for only items 
+satisfying a certain condition -- Ruby offers several options!
+
+# rejecting the number if it is less than 5
+# array_of_numbers.reject! { |number| number < 5 }
+# p array_of_numbers
+
+for hash
+
+
+4. A method that will remove items from a data structure until the condition 
+in the block evaluates to false, then stops (you may not find a perfectly 
+working option for the hash, and that's okay).
+
+need for array
+
+not done
+hash_of_numbers.reject { |digit, word| (digit / 5) != 0}
+p hash_of_numbers
 
 
 
