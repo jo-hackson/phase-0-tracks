@@ -62,7 +62,6 @@ portuguese = {
 # p portuguese
 #=> change the value of "as ervilhas" to "peas"
 
-
 body_parts = [
 	# words in Portuguese
 	["os dedos", "o pescoco", "o ombro", "o joelho", "a perna"],
