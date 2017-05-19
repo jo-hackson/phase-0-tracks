@@ -45,54 +45,33 @@ def fib(number)
 array = [0, 1]
 
 # number create that many elements in the array
+
+# return last number (-1) in the array
 # build code that makes the arrays smaller if number == 0 or 1
+
+if number == 0
+	array = []
+elsif number == 1
+	array = [0]
+else
+	nil
+end
+
 number -= 2
 
 number.times { |number| array << (array[-1] + array[-2])}
 
-# return last number (-1) in the array
 
 
 p array
 end
 
-# fib(1)
+fib(0)
+# fib(0) #=> [0, 1] #=> expect []
+# fib(1) #=> [0, 1] #=> expect [0]
+# fib(2) #=> [0, 1] 
+# fib(3) #=> [0, 1, 1] 
 # fib(6)
 # fib(100)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
