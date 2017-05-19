@@ -5,32 +5,94 @@
 
 # if not, return nil
 
-array = [42, 89, 23, 1]
+# Release 0
 
-def search_array(array, number)
+# array = [42, 89, 23, 1]
 
-count = 0
-poop = 0
-array.each { |array_value| 
+# def search_array(array, number)
 
-		if number == array_value
-			p count
-			poop -= 1 
-		else
-			nil
-			# p "mismatch"
-		end
-		count += 1
-		poop += 1
-}
+# count = 0
+# poop = 0
+# array.each { |array_value| 
 
-if poop == array.length
-	p nil
+# 		if number == array_value
+# 			p count
+# 			poop -= 1 
+# 		else
+# 			nil
+# 			# p "mismatch"
+# 		end
+# 		count += 1
+# 		poop += 1
+# }
+
+# if poop == array.length
+# 	p nil
+# end
+
+# end
+
+# print search_array(array, 4)
+
+
+# Release 1
+
+# create an array with a method of generating and
+# returning Fib terms
+
+def fib(number)
+
+array = [0, 1]
+
+# number create that many elements in the array
+# build code that makes the arrays smaller if number == 0 or 1
+number -= 2
+
+number.times { |number| array << (array[-1] + array[-2])}
+
+# return last number (-1) in the array
+
+
+p array
 end
 
-end
+# fib(1)
+# fib(6)
+# fib(100)
 
 
-print search_array(array, 4)
-# p search_array(array, 4)
-# puts search_array(array, 4)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
