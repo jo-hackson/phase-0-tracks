@@ -69,26 +69,26 @@ class Santa
 	# end
 end
 
-santas = Santa.new("Mo", "female", "Asian")
+# santas = Santa.new("Mo", "female", "Asian")
 
-# # getter method to call something in the initialize
-p santas.ethnicity #=> "Asian"
+# # # getter method to call something in the initialize
+# p santas.ethnicity #=> "Asian"
 
-# # change gender to "male" and p update
-santas.gender = "male"
-p santas.gender #=> "male"
+# # # change gender to "male" and p update
+# santas.gender = "male"
+# p santas.gender #=> "male"
 
-# # add 1 year to age of santa, allow users to choose how many years to add
-santas.celebrate_birthday = 1
-p santas.age #=> 1
+# # # add 1 year to age of santa, allow users to choose how many years to add
+# santas.celebrate_birthday = 1
+# p santas.age #=> 1
 
-# move inputted reindeer to the back of the pack
-p santas.get_mad_at("Dancer")
+# # move inputted reindeer to the back of the pack
+# p santas.get_mad_at("Dancer")
 
-# release 0 driver code
-# santas = Santa.new
-puts santas.eat_milk_and_cookies("snickerdoodle")
-puts santas.speak
+# # release 0 driver code
+# # santas = Santa.new
+# puts santas.eat_milk_and_cookies("snickerdoodle")
+# puts santas.speak
 
 # one way
 # can create empty array and a list of santas and their initialize values
@@ -104,35 +104,53 @@ puts santas.speak
 # santas << Santa.new("N/A", "N/A")
 # p santas
 
-# second way
-# release 0
+
+# release 4
 
 # array of names, genders, and ethnicities of santas
-# names = ["Flo Rida", "Sonja", "Momo", "Henri", "Misha", "Bianca"]
-# gender = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
-# ethnicity = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+names = ["Flo Rida", "Sonja", "Momo", "Henri", "Michala", "Bianca", "Misha", "Gabriela", "Zdenda"]
+gender = ["female", "male", "fofinho", "gordo", "bolinha", "cutiepoo"]
+ethnicity = ["German", "Austrian", "Canadian", "Czech", "cotton ball"]
 
-# # empty array for santa collection
-# santas = []
 
-# # creating a more readable list of santas and outputting to user
-# # so that user can know that information is being processed
+# empty array for santa collection
+santas = []
+
+# creating a more readable list of santas and outputting to user
+# so that user can know that information is being processed
+
+# santas << Santa.new("Flo Rida", "female", "German")
+# p santas
+
+puts "Iterating through names list to create santas ..."
+names.length.times do |i|
+	puts "Creating a santa named #{names[i]} ..."
+	santas << Santa.new(names[i], gender[i], ethnicity[i])
+	puts "There are now #{santas.length} in the collection."
+	puts "#{names[i]} who is #{gender[i]} and #{ethnicity[i]} has been added to the Santa database."
+	puts "----"
+end
+
+p santas
+
 # puts "Iterating through names list to create santas ..."
 # names.each do |name, gender, ethnicity|
 # 	puts "Creating a santa named #{name} ..."
 # 	santas << Santa.new(name, gender, ethnicity)
+# 	p santas
 # 	puts "There are now #{santas.length} in the collection."
+# 	puts "#{name} who is #{gender} and #{ethnicity} has been added to the Santa database."
 # 	puts "----"
 # end
 
 # # driver code to test if each santa can eat a specific type of cookie
-# puts "Testing each Santa to make sure that it can eat a choclate chip cookie."
-# santa.each do |santa|
+# puts "Testing each Santa to make sure that he/she can eat a choclate chip cookie."
+# santas.each do |santa|
 # 	santa.eat_milk_and_cookies("chocolate chip")
 # end
 
 # # p final santas array
-# p santas
+p santas
 
 
 
