@@ -69,8 +69,9 @@ class Santa
 	# end
 end
 
-# santas = Santa.new("Mo", "female", "Asian")
 
+# santas = Santa.new("Mo", "female", "Asian")
+# p santas
 # # # getter method to call something in the initialize
 # p santas.ethnicity #=> "Asian"
 
@@ -79,7 +80,7 @@ end
 # p santas.gender #=> "male"
 
 # # # add 1 year to age of santa, allow users to choose how many years to add
-# santas.celebrate_birthday = 1
+# santas.celebrate_birthday = 2
 # p santas.age #=> 1
 
 # # move inputted reindeer to the back of the pack
@@ -112,26 +113,42 @@ names = ["Flo Rida", "Sonja", "Momo", "Henri", "Michala", "Bianca", "Misha", "Ga
 gender = ["female", "male", "fofinho", "gordo", "bolinha", "cutiepoo"]
 ethnicity = ["German", "Austrian", "Canadian", "Czech", "cotton ball"]
 
-
 # empty array for santa collection
 santas = []
-
-# creating a more readable list of santas and outputting to user
-# so that user can know that information is being processed
 
 # santas << Santa.new("Flo Rida", "female", "German")
 # p santas
 
+# use array of genders and ethnicities and randomly select
 puts "Iterating through names list to create santas ..."
 names.length.times do |i|
-	puts "Creating a santa named #{names[i]} ..."
-	santas << Santa.new(names[i], gender[i], ethnicity[i])
+	name = names[i]
+	rand_gender = gender.sample
+	rand_ethnicity0 = "#{ethnicity.sample}-#{ethnicity.sample}"
+	puts "Creating a santa named #{name} ..."
+	santas << Santa.new(name, rand_gender, rand_ethnicity0)
 	puts "There are now #{santas.length} in the collection."
-	puts "#{names[i]} who is #{gender[i]} and #{ethnicity[i]} has been added to the Santa database."
+	puts "#{name} who is #{rand_gender} and #{rand_ethnicity0} has been added to the Santa database."
 	puts "----"
 end
 
-p santas
+# set your new Santa's age to a random number between 0 and 140.
+names.length.times do |i|
+	number_range = Random.new
+	santas[i].celebrate_birthday = number_range.rand(141)
+	santas[i].age
+	puts "#{santas[i].name} is #{santas[i].age} years old."
+end
+
+# santas.celebrate_birthday= 1
+# p santas[0].age
+# # p santas.age
+# puts "#{santas[0].name} is #{santas[0].age} years old."
+
+# santas.celebrate_birthday
+# generated_numbers = 4.times.map{Random.rand(8) } #=> [4, 2, 6, 8]
+
+
 
 # puts "Iterating through names list to create santas ..."
 # names.each do |name, gender, ethnicity|
@@ -149,8 +166,6 @@ p santas
 # 	santa.eat_milk_and_cookies("chocolate chip")
 # end
 
-# # p final santas array
-p santas
 
 
 
