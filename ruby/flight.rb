@@ -9,11 +9,11 @@ module Flight
 end
 
 class Bird
-	include flight
+	include Flight
 end
 
 class Plane
-	include flight
+	include Flight
 end
 
 bird = Bird.new
