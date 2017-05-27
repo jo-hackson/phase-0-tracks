@@ -25,7 +25,6 @@ def create_list(items)
 	item_array.each do |item|
 		item_list[item] = default_quantity
 	end
-	item_list
 	pretty_list(item_list) 
 end
 
@@ -40,7 +39,6 @@ shopping_list = create_list("carrots apples cereal pizza")
 
 def add_to_list(list, item, quantity = 1)
 	list[item] = quantity
-	list
 end
 
 add_to_list(shopping_list, "lemonade", 2)
@@ -55,7 +53,6 @@ add_to_list(shopping_list, "ice cream", 4)
 
 def remove_from_list(list, item)
 	list.delete(item)
-	list
 end
 
 remove_from_list(shopping_list, "lemonade")
@@ -66,16 +63,10 @@ remove_from_list(shopping_list, "lemonade")
 # output: updated list with value: quantity updated for item 
 
 def update_quantity(list, item, quantity)
-	list.each { |item_name, item_quantity| 
-		if item == item_name 
-			list[item_name] = quantity
-		end
-	}
+	add_to_list(list, item, quantity)
 end
 
-update_quantity(shopping_list, "pizza", 10)
-
-
+update_quantity(shopping_list, "ice cream", 1)
 
 pretty_list(shopping_list)
 
