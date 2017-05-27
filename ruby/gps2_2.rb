@@ -1,3 +1,15 @@
+# Method to print a list and make it look pretty
+# input: list
+	# steps: go through list and print out item name with quantity and 
+	# fluff text to make it look presentable
+# output: "You will need to purchase: quantity of item, etc"
+
+def pretty_list(list)
+	list.each { |item_name, item_quantity|
+		puts "You will need to purchase #{item_quantity} of #{item_name}."
+	}
+end
+
 # Method to create a list
 # input: string of items separated by spaces (example: "carrots apples cereal pizza")
 # steps: 
@@ -6,6 +18,19 @@
   # print the list to the console, call print list method
 # output: hash, key: items, value: quantity
 
+def create_list(items)
+	item_list = {}
+	item_array = items.split(" ")
+	default_quantity = 1
+	item_array.each do |item|
+		item_list[item] = default_quantity
+	end
+	item_list
+	pretty_list(item_list) 
+end
+
+shopping_list = create_list("carrots apples cereal pizza")
+
 # Method to add an item to a list
 # input: list, item name, and optional quantity
 # steps: add key: item to list; 
@@ -13,18 +38,48 @@
 	# if not, default to default
 # output: updated hash with new key: items and value: quantity
 
+def add_to_list(list, item, quantity = 1)
+	list[item] = quantity
+	list
+end
+
+add_to_list(shopping_list, "lemonade", 2)
+add_to_list(shopping_list, "tomatoes", 3)
+add_to_list(shopping_list, "onions")
+add_to_list(shopping_list, "ice cream", 4)
+
 # Method to remove an item from the list
 # input: item that we want to remove from the list, list
-# steps: search inside list for item name, delete item name
+	# steps: search inside list for item name, delete item name
 # output: updated list with item removed
+
+def remove_from_list(list, item)
+	list.delete(item)
+	list
+end
+
+remove_from_list(shopping_list, "lemonade")
 
 # Method to update the quantity of an item
 # input: list, key: item, value: quantity
-# steps: go through list, find key: item, update value: quantity
+	# steps: go through list, find key: item, update value: quantity
 # output: updated list with value: quantity updated for item 
 
-# Method to print a list and make it look pretty
-# input: list
-# steps: go through list and print out item name with quantity and 
-	# fluff text to make it look presentable
-# output: "You will need to purchase: quantity of item, etc"
+def update_quantity(list, item, quantity)
+	list.each { |item_name, item_quantity| 
+		if item == item_name 
+			list[item_name] = quantity
+		end
+	}
+end
+
+update_quantity(shopping_list, "pizza", 10)
+
+
+
+pretty_list(shopping_list)
+
+
+
+
+
