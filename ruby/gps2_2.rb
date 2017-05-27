@@ -70,7 +70,28 @@ update_quantity(shopping_list, "ice cream", 1)
 
 pretty_list(shopping_list)
 
+# Release 4: Reflect
+# What did you learn about pseudocode from working on this challenge?
+# That thinking ahead about input and output is very useful. The basic 
+# structure of pseucode is simple but effective.
 
+# What are the tradeoffs of using arrays and hashes for this challenge?
+# There are some special methods that can only be called on to arrays
+# or hashes. For this particular method, hashes would still be better
+# because of the key value assignment feature.
 
+# What does a method return?
+# A method returns the last value defined.
 
+# What kind of things can you pass into methods as arguments?
+# String and Fixnums are some things that you can pass into methods as
+# arguments. You cannot pass instance variables or other methods (only what
+# other methods return).
 
+# How can you pass information between methods?
+# You can call a method inside another method. You can also name something that
+# a variable returns and pass as an argumentfor a method.
+
+# What concepts were solidified in this challenge, and what concepts are still confusing?
+# I know now more of the importance of pseudocode and how it can be utilized
+# to make life easier when the coding starts. 
