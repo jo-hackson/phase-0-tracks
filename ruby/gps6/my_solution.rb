@@ -95,3 +95,23 @@ end
 
 #=======================================================================
 # Reflection Section
+
+# What are the differences between the two different hash syntaxes shown in the state_data file?
+#   There is the hash rocket (=>) and the colon (:). You use the hash rocket when you have
+#   symbols that require quoting. For the most part, you can use both hash syntaxes
+#   interchangeably but the colon is more new.
+
+# What does require_relative do? How is it different from require?
+#   Require_relative tells the code where the Ruby file. is located. It differs from require
+#   regarding file path.
+
+# What are some ways to iterate through a hash?
+#   A good way to iterate through a hash is with each. 
+
+# When refactoring virus_effects, what stood out to you about the variables, if anything?
+#   Instance variables and their scope. Because instance variables are accessible throughout
+#   a class, they do not need to be passed in as arguments in a method.
+
+# What concept did you most solidify in this challenge?
+#   How to use the case when statement and refactoring a if else statement.
+
