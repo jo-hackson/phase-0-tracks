@@ -6,9 +6,10 @@
 	// then print on console the array in string form
 // output: returns the longest word in the array
 
-// function biggestWord(input_array){
-	function biggestWord(input_array) {
-
+function biggestWord(input_array) {
+	// console.log("input array")
+	// console.log(input_array)
+	// console.log(input_array[1])
 	while (input_array.length!= 1) {
 	if (input_array[0].length > input_array[1].length) {
 		input_array.splice(1, 1)
@@ -38,23 +39,19 @@
 
 function keyValueMatch(object1, object2) {
 
+	var tally = [];
+
 	for (var i = 0; i < Object.keys(object1).length; i++) {
 
-		var tally = [];
-		console.log(tally);
-
 		if (Object.keys(object1)[i] != Object.keys(object2)[i]) {
-			console.log("1");
 			tally.push("false");
 		} else {
 			if (Object.values(object1)[i] == Object.values(object2)[i]) {
-				console.log("2");
 				tally.push("true");
 			} else {
-				console.log("3");
 				tally.push("false");
 			}
-		}
+		} 
 	}
 
 		if (tally.includes("true")) {
@@ -63,14 +60,53 @@ function keyValueMatch(object1, object2) {
 		} else {
 			console.log("false");
 			return false
-		}
+		} 
 		}
 
-		
-
+// keyValueMatch({animal: "Dog", legs: 4}, {animal: "Dog", legs: 3}); // true
 // keyValueMatch({name: "Steven", age: 54}, {name: "Tamir", age: 54}); //  true
-keyValueMatch({animal: "Dog", legs: 4}, {animal: "Dog", legs: 3}); //  true
-keyValueMatch({animal: "Cat", legs: 4}, {animal: "Dog", legs: 4}); //  true
+// keyValueMatch({animal: "Cat", legs: 4}, {animal: "Dog", legs: 4}); //  true
+
+
+// ____________________________________________________________
+
+// Release 2: Generate Random Test Data
+
+// input: length corresponding to how many words to be returned
+// tips: generate a randon number
+// steps: declare the variable
+	// randomly select index to put corresponding value into new array
+	// run interger amount of times
+	// print the array
+	// feed array to longest word function
+	// print result
+// output: array of strings of the given length
+
+function randomizer(quantity_of_words) {
+	
+	var word_bank = ["a", "ab", "abc", "abcd", "abcde", "abcdef", "abcdefg", "abcdefgh", "abcdefghi", "abcdefghij"];
+	var output_array = [];
+
+	for (var i = 0; i < quantity_of_words; i++) {
+	output_array.push(word_bank[Math.floor(Math.random() * 6) + 1]);
+	} // for
+	console.log("Here is your random word bank: ") + console.log(output_array)
+	console.log("Here is the biggest word in your bank: ") + biggestWord(output_array)
+
+} // function
+
+
+randomizer(2)
+randomizer(3)
+randomizer(4)
+randomizer(5)
+randomizer(6)
+randomizer(7)
+randomizer(8)
+randomizer(9)
+randomizer(5)
+randomizer(4)
+
 
 
 

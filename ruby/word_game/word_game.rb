@@ -117,10 +117,10 @@ class WordGame
 
 end
 
-puts "Welcome to the \"Animal Kingdom Word Guessing Game!\""
-game = WordGame.new
-game.word_selector
-p game.current_state_setter
-game.loop_through
-game.congrats_or_taunt
+# puts "Welcome to the \"Animal Kingdom Word Guessing Game!\""
+# game = WordGame.new
+# game.word_selector
+# p game.current_state_setter
+# game.loop_through
+# game.congrats_or_taunt
 
