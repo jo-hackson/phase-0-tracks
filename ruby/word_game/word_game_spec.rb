@@ -1,4 +1,4 @@
-require_relative 'word.game'
+require_relative 'word_game'
 
 # going to test with the word "llama"
 describe WordGame do
