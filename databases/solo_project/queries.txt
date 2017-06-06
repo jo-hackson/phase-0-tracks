@@ -64,3 +64,33 @@ SELECT * FROM restaurants;
 2|Per Se|New York City|Thomas Keller|2004|false
 4|Alinea|Chicago|Grant Achatz|2005|false
 5|Next|Chicago|Grant Achatz|2011|false
+
+
+Some JOIN commands
+
+There are:
+1. join or inner join
+2. outer join (left outer join/left join, right outer join/right join, full outer join/full join)
+3. natural join
+4. cross join
+5. self join
+
+
+INNER JOIN: returns only matching rows between tables
+SELECT restaurant, head_chef, been_there FROM restaurants INNER JOIN chefs ON chefs.chef_name = restaurants.head_chef;
+
+The French Laundry|Thomas Keller|false
+Per Se|Thomas Keller|false
+Alinea|Grant Achatz|false
+Next|Grant Achatz|false
+
+OUTER JOIN: returns all matching rows and non matching rows from the left side
+
+
+
+
+
+
+
+
+
