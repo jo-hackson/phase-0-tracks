@@ -1,0 +1,66 @@
+Display the information in one table (either table is fine).
+
+SELECT * FROM restaurants;
+
+1|The French Laundry|Yountville|Thomas Keller|1994|false
+2|Per Se|New York City|Thomas Keller|2004|false
+3|Bouchon|Yountville|Thomas Keller|1998|true
+4|Alinea|Chicago|Grant Achatz|2005|false
+5|Next|Chicago|Grant Achatz|2011|false
+6|Menton|Boston|Barbara Lynch|2010|true
+7|B&G Oysters|Boston|Barbara Lynch|2003|true
+
+SELECT * FROM chefs;
+
+1|Thomas Keller
+2|Grant Achatz
+3|Barbara Lynch
+
+
+Update an item that meets some condition (you can choose a condition that makes sense).
+
+UPDATE restaurants SET year_established=1995 WHERE restaurant="The French Laundry";
+
+SELECT * FROM restaurants;
+
+1|The French Laundry|Yountville|Thomas Keller|1995|false
+2|Per Se|New York City|Thomas Keller|2004|false
+3|Bouchon|Yountville|Thomas Keller|1998|true
+4|Alinea|Chicago|Grant Achatz|2005|false
+5|Next|Chicago|Grant Achatz|2011|false
+6|Menton|Boston|Barbara Lynch|2010|true
+7|B&G Oysters|Boston|Barbara Lynch|2003|true
+
+
+Display the information in both tables using one query.
+
+SELECT * FROM restaurants, chefs WHERE restaurants.head_chef = chefs.chef_name;
+
+1|The French Laundry|Yountville|Thomas Keller|1995|false|1|Thomas Keller
+2|Per Se|New York City|Thomas Keller|2004|false|1|Thomas Keller
+3|Bouchon|Yountville|Thomas Keller|1998|true|1|Thomas Keller
+4|Alinea|Chicago|Grant Achatz|2005|false|2|Grant Achatz
+5|Next|Chicago|Grant Achatz|2011|false|2|Grant Achatz
+6|Menton|Boston|Barbara Lynch|2010|true|3|Barbara Lynch
+7|B&G Oysters|Boston|Barbara Lynch|2003|true|3|Barbara Lynch
+
+
+Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+
+SELECT restaurants.restaurant, restaurants.year_established FROM restaurants WHERE head_chef="Thomas Keller";
+
+The French Laundry|1995
+Per Se|2004
+Bouchon|1998
+
+
+Delete an item that meets some condition (you can choose a condition that makes sense).
+
+DELETE FROM restaurants WHERE been_there="true";
+
+SELECT * FROM restaurants;
+
+1|The French Laundry|Yountville|Thomas Keller|1995|false
+2|Per Se|New York City|Thomas Keller|2004|false
+4|Alinea|Chicago|Grant Achatz|2005|false
+5|Next|Chicago|Grant Achatz|2011|false
