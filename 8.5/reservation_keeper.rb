@@ -17,7 +17,7 @@ create_table_cmd = <<-SQL
 	# 	hotel_name VARCHAR(255),
 	# 	check_in DATE,
 	# 	check_out DATE
-	# )
+	# )	
 
 	# CREATE TABLE flight(
 	# 	id INTEGER PRIMARY KEY,
@@ -30,7 +30,7 @@ create_table_cmd = <<-SQL
 
 SQL
 
-db.execute(create_table_cmd)
+# db.execute(create_table_cmd)
 
 # ask user if they are new
 # if new
