@@ -2,7 +2,8 @@
 
 require 'sqlite3'
 
-db = SQLite3::Database.new("reservation.db")
+# db = SQLite3::Database.new("reservation.db")
+db = SQLite3::Database.new("reservations.db")
 
 create_table_cmd = <<-SQL
 	CREATE TABLE login(
@@ -11,29 +12,32 @@ create_table_cmd = <<-SQL
 		password VARCHAR(255)
 	)
 
-	CREATE TABLE hotel(
-		id INTEGER PRIMARY KEY,
-		hotel_name VARCHAR(255),
-		check_in DATE,
-		check_out DATE
-	)
+	# CREATE TABLE hotel(
+	# 	id INTEGER PRIMARY KEY,
+	# 	hotel_name VARCHAR(255),
+	# 	check_in DATE,
+	# 	check_out DATE
+	# )
 
-	CREATE TABLE flight(
-		id INTEGER PRIMARY KEY,
-		flight_date DATE,
-		origin_airport VARCHAR(255),
-		departure_time TIME,
-		destination_airport VARCHAR(255),
-		arrival_time TIME
-	)
+	# CREATE TABLE flight(
+	# 	id INTEGER PRIMARY KEY,
+	# 	flight_date DATE,
+	# 	origin_airport VARCHAR(255),
+	# 	departure_time TIME,
+	# 	destination_airport VARCHAR(255),
+	# 	arrival_time TIME
+	# )
+
 SQL
+
+db.execute(create_table_cmd)
 
 # ask user if they are new
 # if new
 # 	then create a new username
 # 	do check that it is not taken
 # else
-# 	sign in
+# 	sign in 
 
 # make sure that username = password
 
@@ -55,7 +59,7 @@ SQL
 # end
 
 # def add_flight(flight_date, origin_airport, departure_time, destination_airport, arrival_time)
-# 	puts "You will be flying from #{origin_airport} at #{departure_time} to #{destination_airport} and arrive #{arrival_time}."
+# 	puts "On #{flight_date}, you will be flying from #{origin_airport} at #{departure_time} to #{destination_airport} and arrive #{arrival_time}."
 # 	confirmation
 # end
 
@@ -77,6 +81,7 @@ SQL
 # 	arrival_time = gets.chomp
 
 # 	add_flight(flight_date, origin_airport, departure_time, destination_airport, arrival_time)
+
 # end
 
 # def add_hotel(hotel_name, check_in, check_out)
