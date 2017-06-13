@@ -74,8 +74,21 @@ end
 
 # Optional bonus: Make a route that allows the user to search the database in some way -- maybe for students who have a certain first name, or some other attribute. If you like, you can simply modify the home page to take a query parameter, and filter the students displayed if a query parameter is present.
 
+# Is Sinatra the only web app library in Ruby? What are some others?
+# - can be found in as Ruby Gems
+
+# Are SQLite and the sqlite3 gem your only options for using a database with Sinatra? What are some others?
+# - Active Record
+# - Couchdb
+# - Data Mapper
+# - Mongo
+# - Ohm
+# - Sequel
 
 
+# What is meant by the term web stack?
+# - the software framework needed for web development
+# - operating system, a webserver, a database, and a script interpreter
 
 
 
